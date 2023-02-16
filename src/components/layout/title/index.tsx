@@ -6,6 +6,7 @@ import { logo, yariga } from "assets";
 
 export const Title: React.FC<TitleProps> = ({ collapsed }) => {
   const { Link } = useRouterContext();
+  console.log("either collapsed");
 
   return (
     <Button fullWidth variant="text" disableRipple>
