@@ -118,6 +118,7 @@ function App() {
       }
     },
   };
+  console.log("again started on work");
 
   return (
     <ColorModeContextProvider>
