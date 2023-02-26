@@ -6,8 +6,6 @@ export const Header: React.FC = () => {
   const { data: user } = useGetIdentity();
   const showUserInfo = user && (user.name || user.avatar);
 
-  console.log("hello dashboard");
-
   return (
     <AppBar
       color="default"
