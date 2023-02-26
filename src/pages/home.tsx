@@ -6,6 +6,7 @@ import {
   PropertyReferrals,
   TotalRevenue,
   PropertyCard,
+  TopAgent,
 } from "../components";
 
 const Home = () => {
@@ -20,8 +21,8 @@ const Home = () => {
 
   const latestProperties = data?.data ?? [];
 
-  if (isLoading) return <Typography>Loading...</Typography>;
-  if (isError) return <Typography>Something went wrong!</Typography>;
+  // if (isLoading) return <Typography>Loading...</Typography>;
+  // if (isError) return <Typography>Something went wrong!</Typography>;
 
   return (
     <Box>
