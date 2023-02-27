@@ -67,7 +67,7 @@ const Home = () => {
         <PropertyReferrals />
       </Stack>
 
-      <Box
+      {/* <Box
         flex={1}
         borderRadius="15px"
         padding="20px"
@@ -93,7 +93,7 @@ const Home = () => {
             />
           ))}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
