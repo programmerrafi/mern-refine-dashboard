@@ -56,6 +56,8 @@ function App() {
     login: async ({ credential }: CredentialResponse) => {
       const profileObj = credential ? parseJwt(credential) : null;
 
+      // Save user to MongoDB...
+
       if (profileObj) {
         const response = await fetch("http://localhost:8080/api/v1/users", {
           method: "POST",
@@ -166,8 +168,8 @@ function App() {
           Layout={Layout}
           Header={Header}
           routerProvider={routerProvider}
-          // authProvider={authProvider}
-          // LoginPage={Login}
+          authProvider={authProvider}
+          LoginPage={Login}
           DashboardPage={Home}
         />
       </RefineSnackbarProvider>
