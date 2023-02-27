@@ -57,6 +57,13 @@ const Form = ({
               id="outlined-basic"
               color="info"
               variant="outlined"
+              inputProps={{
+                style: {
+                  color: "#737583",
+                  border: "1px solid rgba(0,0,0,0.23)",
+                  borderRadius: "5px",
+                },
+              }}
               {...register("title", { required: true })}
             />
           </FormControl>
@@ -108,6 +115,11 @@ const Form = ({
                 required
                 inputProps={{ "aria-label": "Without label" }}
                 defaultValue="apartment"
+                style={{
+                  color: "#737583",
+                  border: "1px solid rgba(0,0,0,0.23)",
+                  borderRadius: "5px",
+                }}
                 {...register("propertyType", {
                   required: true,
                 })}
@@ -140,6 +152,13 @@ const Form = ({
                 color="info"
                 type="number"
                 variant="outlined"
+                inputProps={{
+                  style: {
+                    color: "#737583",
+                    border: "1px solid rgba(0,0,0,0.23)",
+                    borderRadius: "5px",
+                  },
+                }}
                 {...register("price", { required: true })}
               />
             </FormControl>
@@ -162,6 +181,13 @@ const Form = ({
               id="outlined-basic"
               color="info"
               variant="outlined"
+              inputProps={{
+                style: {
+                  color: "#737583",
+                  border: "1px solid rgba(0,0,0,0.23)",
+                  borderRadius: "5px",
+                },
+              }}
               {...register("location", { required: true })}
             />
           </FormControl>

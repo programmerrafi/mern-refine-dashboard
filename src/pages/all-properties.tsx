@@ -85,6 +85,13 @@ const AllProperties = () => {
                 variant="outlined"
                 color="info"
                 placeholder="Search by title"
+                inputProps={{
+                  style: {
+                    color: "#737583",
+                    border: "1px solid rgba(0,0,0,0.23)",
+                    borderRadius: "5px",
+                  },
+                }}
                 value={currentFilterValues.title}
                 onChange={(e) => {
                   setFilters([
@@ -106,6 +113,11 @@ const AllProperties = () => {
                 inputProps={{ "aria-label": "Without label" }}
                 defaultValue=""
                 value={currentFilterValues.propertyType}
+                style={{
+                  color: "#737583",
+                  border: "1px solid rgba(0,0,0,0.23)",
+                  borderRadius: "5px",
+                }}
                 onChange={(e) => {
                   setFilters(
                     [
