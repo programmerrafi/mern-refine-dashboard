@@ -51,6 +51,11 @@ axiosInstance.interceptors.request.use((request: AxiosRequestConfig) => {
   return request;
 });
 
+// Api url from render.com
+const renderApiUrl = process.env.REACT_APP_RENDER_API_URL
+  ? process.env.REACT_APP_RENDER_API_URL
+  : "http://localhost:8080";
+
 function App() {
   const authProvider: AuthProvider = {
     login: async ({ credential }: CredentialResponse) => {
@@ -59,7 +64,7 @@ function App() {
       // Save user to MongoDB...
 
       if (profileObj) {
-        const response = await fetch("http://localhost:8080/api/v1/users", {
+        const response = await fetch(`${renderApiUrl}/api/v1/users`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -127,7 +132,7 @@ function App() {
       <GlobalStyles styles={{ html: { WebkitFontSmoothing: "auto" } }} />
       <RefineSnackbarProvider>
         <Refine
-          dataProvider={dataProvider("http://localhost:8080/api/v1")}
+          dataProvider={dataProvider(`${renderApiUrl}/api/v1`)}
           notificationProvider={notificationProvider}
           ReadyPage={ReadyPage}
           catchAll={<ErrorComponent />}
