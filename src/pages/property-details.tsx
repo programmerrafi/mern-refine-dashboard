@@ -46,6 +46,7 @@ const PropertyDetails = () => {
       mutate(
         {
           resource: "properties",
+          // resource: "api/v1/properties",
           id: id as string,
         },
         {
@@ -243,6 +244,7 @@ const PropertyDetails = () => {
                   }
                 }}
               />
+              {/* Delete button */}
               <CustomButton
                 title={!isCurrentUser ? "Call" : "Delete"}
                 backgroundColor={!isCurrentUser ? "#2ED480" : "#d42e2e"}
