@@ -21,8 +21,9 @@ const Home = () => {
 
   const latestProperties = data?.data ?? [];
 
-  if (isLoading) return <Typography>Loading...</Typography>;
-  if (isError) return <Typography>Something went wrong!</Typography>;
+  if (isLoading) return <div style={{ color: "#11142D" }}>Loading...</div>;
+  if (isError)
+    return <div style={{ color: "#11142D" }}>Something went wrong!</div>;
 
   return (
     <Box>

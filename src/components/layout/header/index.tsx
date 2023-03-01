@@ -22,10 +22,17 @@ export const Header: React.FC = () => {
           alignItems="center"
         >
           {showUserInfo && (
-            <Stack direction="row" gap="16px" alignItems="center">
+            <Stack
+              direction="row"
+              gap="16px"
+              alignItems="center"
+              sx={{ color: "#000" }}
+            >
               {user.avatar && <Avatar src={user?.avatar} alt={user?.name} />}
               {user.name && (
-                <Typography variant="subtitle2">{user?.name}</Typography>
+                <Typography sx={{ color: "#000" }} variant="subtitle2">
+                  {user?.name}
+                </Typography>
               )}
             </Stack>
           )}

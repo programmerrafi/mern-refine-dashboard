@@ -15,8 +15,8 @@ const AgentProfile = () => {
 
   const myProfile = data?.data ?? [];
 
-  if (isLoading) return <div>loading...</div>;
-  if (isError) return <div>error...</div>;
+  if (isLoading) return <div style={{ color: "#000" }}>loading...</div>;
+  if (isError) return <div style={{ color: "#000" }}>error...</div>;
 
   return (
     <Profile

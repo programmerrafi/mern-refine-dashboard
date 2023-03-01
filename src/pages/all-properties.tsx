@@ -49,8 +49,8 @@ const AllProperties = () => {
     };
   }, [filters]);
 
-  if (isLoading) return <Typography>Loading...</Typography>;
-  if (isError) return <Typography>Error...</Typography>;
+  if (isLoading) return <div style={{ color: "#000" }}>Loading...</div>;
+  if (isError) return <div style={{ color: "#000" }}>Error...</div>;
 
   return (
     <Box>
@@ -188,9 +188,10 @@ const AllProperties = () => {
             display={{ xs: "hidden", sm: "flex" }}
             alignItems="center"
             gap="5px"
+            color="#6e6d6d"
           >
             Page{" "}
-            <strong>
+            <strong style={{ color: "#555454" }}>
               {current} of {pageCount}
             </strong>
           </Box>
@@ -208,6 +209,7 @@ const AllProperties = () => {
             required
             inputProps={{ "aria-label": "Without label" }}
             defaultValue={10}
+            style={{ color: "#6e6d6d" }}
             onChange={(e) =>
               setPageSize(e.target.value ? Number(e.target.value) : 10)
             }

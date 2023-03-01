@@ -11,8 +11,8 @@ const MyProfile = () => {
 
   const myProfile = data?.data ?? [];
 
-  if (isLoading) return <div>loading...</div>;
-  if (isError) return <div>error...</div>;
+  if (isLoading) return <div style={{ color: "#11142D" }}>loading...</div>;
+  if (isError) return <div style={{ color: "#11142D" }}>error...</div>;
 
   return (
     <Profile
